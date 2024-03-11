@@ -1,0 +1,14 @@
+body {
+  background-color: lightcyan;
+}
+
+header {
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  border: 2px solid black;
+}
