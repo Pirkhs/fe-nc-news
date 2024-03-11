@@ -22,3 +22,13 @@ h3 {
 .single-article img {
     width: 40%;
 }
+
+.vote-count {
+    display: inline-block;
+}
+
+.article-upvote, .article-downvote {
+    border: 2px solid black;
+    border-radius: 5%;
+    cursor: pointer;
+}

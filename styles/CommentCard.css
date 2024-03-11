@@ -1,0 +1,31 @@
+.comment-card {
+    padding-left: 3%;
+    padding-top: 3%;
+    width: 85%;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow: 10px 15px 20px rgb(13, 14, 14);
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-card img {
+    width: 5%;
+    height: 5%;
+}
+
+.comment-id {
+    text-align: right;
+}
+
+.vote-count {
+    display: inline-block;
+}
+
+.comment-card-upvote, .comment-card-downvote {
+    border: 2px solid black;
+    border-radius: 5%;
+    cursor: pointer;
+}

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { getArticleById } from "../src/api";
 import Loading from './Loading';
+import Comments from './Comments';
 
 export default function SingleArticle () {
     const [article, setArticle] = useState({})
@@ -20,18 +21,26 @@ export default function SingleArticle () {
     
     return isLoading ? ( <Loading/> ) :
      (
+        <>
+        
         <div className="single-article">
             <p> {article.author} </p>
             <h3> {article.title} </h3>
             <br></br>
             <p className="article-body"> {article.body}</p>
-            <img src={article.article_img_url}></img>
+            <img src={article.article_img_url} alt={article.title}></img>
             <br></br>
             <p className="article-card-topic"> Topic:  {article.topic} </p>
             <p> Created At: {article.created_at} </p>
             <br></br>
-            <button className="article-card-votes"> Votes ⬆️ : {article.votes} </button>
-            <p className="article_id"> Id: {article.article_id}  </p>
+            <button className="article-upvote">   ⬆️   </button>
+            <p className="vote-count">  {article.votes }  </p>
+            <button className="article-downvote">   ⬇️  </button>
+            <p className="article_id"> Article Id: {article.article_id}  </p>
         </div>
+
+        <br></br>
+        <Comments article_id={article_id}/>
+        </>
     )
 }
