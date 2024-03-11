@@ -1,0 +1,24 @@
+.single-article {
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    text-align: center;
+    box-shadow: 10px 15px 20px rgb(13, 14, 14);
+}
+
+.article-body {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.article_id {
+    text-align: right;
+}
+
+h3 {
+    font-size: 200%;
+}
+
+.single-article img {
+    width: 40%;
+}

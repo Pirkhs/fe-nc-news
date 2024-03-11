@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Home from '../components/Home'
 import Articles from '../components/Articles'
+import SingleArticle from '../components/SingleArticle'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/articles" element={<Articles/>}> </Route>
+        <Route path="/articles/:article_id" element={<SingleArticle/>}></Route>
       </Routes>
     </>
   )
