@@ -45,7 +45,6 @@ export default function SingleArticle () {
         })
     }, [])
 
-    
     return isLoading ? ( <Loading/> ) :
      (
         <>
@@ -58,7 +57,7 @@ export default function SingleArticle () {
             <img src={article.article_img_url} alt={article.title}></img>
             <br></br>
             <p className="article-card-topic"> Topic:  {article.topic} </p>
-            <p> Created At: {article.created_at} </p>
+            <p> {Date(article.created_at).toString()} </p>
             <br></br>
             <button id="upvote" className="article-upvote" onClick = {(e) => setButtonClicked(e.target)}>   ⬆️   </button>
             <p className="vote-count">  {article.votes }  </p>

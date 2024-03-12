@@ -11,7 +11,7 @@ export default function CommentCard ({comment}) {
             <p className="vote-count">  {comment.votes }  </p>
             <button className="comment-card-downvote">   ⬇️  </button>
             <p className="comment-id"> Comment Id: {comment.comment_id}</p>
-            <p> Created At: {comment.created_at} </p>
+            <p> { Date(comment.created_at).toString()} </p>
             <br></br>
         </div>
     )
