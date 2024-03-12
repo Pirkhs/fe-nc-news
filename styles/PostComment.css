@@ -1,0 +1,18 @@
+.post-comment {
+    padding-left: 3%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    width: 85%;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow: 10px 15px 20px rgb(13, 14, 14);
+}
+
+h5 {
+    font-size: 150%;
+}
+
+#comment-body {
+    width: 95%;
+
+}

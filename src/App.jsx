@@ -6,12 +6,16 @@ import Nav from '../components/Nav'
 import Home from '../components/Home'
 import Articles from '../components/Articles'
 import SingleArticle from '../components/SingleArticle'
+import UserContext from '../components/User'
 
 function App() {
 
+  const [loggedInUser, setLoggedInUser] = useState({
+    username: "tickle122"
+  })
 
   return (
-    <>
+    <UserContext.Provider value = {{loggedInUser: loggedInUser, setLoggedInUser: setLoggedInUser}}>
       <Header/>
       <Nav/>
       <br></br>
@@ -20,7 +24,7 @@ function App() {
         <Route path="/articles" element={<Articles/>}> </Route>
         <Route path="/articles/:article_id" element={<SingleArticle/>}></Route>
       </Routes>
-    </>
+    </UserContext.Provider>
   )
 }
 
