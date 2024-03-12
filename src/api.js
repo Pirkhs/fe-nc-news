@@ -15,3 +15,9 @@ export function getArticleById (article_id) {
 export function getCommentsByArticleId (article_id) {
     return newsAPI.get(`/articles/${article_id}/comments`)
 }
+
+export function incrementArticleVoteCount (article_id, incVotes) {
+    if (incVotes === 0) console.log("sadsa")
+
+    return newsAPI.patch(`/articles/${article_id}`, {incVotes: incVotes})
+}

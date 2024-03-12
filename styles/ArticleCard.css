@@ -16,9 +16,3 @@ img {
     height: 20%;
     border-radius: 5%;
 }
-
-.article-card-upvote, .article-card-downvote {
-    border: 2px solid black;
-    border-radius: 5%;
-    cursor: pointer;
-}
