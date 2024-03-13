@@ -27,4 +27,5 @@ export function postComment (article_id, username, body) {
 
 export function deleteComment (comment_id) {
     return newsAPI.delete(`/comments/${comment_id}`)
+
 }

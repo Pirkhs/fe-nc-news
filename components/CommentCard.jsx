@@ -10,7 +10,7 @@ export default function CommentCard ({comment, comments, handleCommentState}) {
     return (
         <div className="comment-card">
             {
-                comment.author === username ? <DeleteComment comment_id={comment.comment_id} comments={comments} handleCommentState={handleCommentState}/> : <br></br>
+                comment.author === username ? <DeleteComment comment_id={comment.comment_id} handleCommentState={handleCommentState}/> : <br></br>
             }
             <img src="../src/default-profile-icon.png" alt="A default profile icon"/>
             <p className="comment-author"> {comment.author} </p>
