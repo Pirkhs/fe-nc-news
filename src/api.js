@@ -18,6 +18,7 @@ export function getCommentsByArticleId (article_id) {
 
 export function incrementArticleVoteCount (article_id, incVotes) {
     return newsAPI.patch(`/articles/${article_id}`, {incVotes: incVotes})
+    // return Promise.reject({})
 }
 
 export function postComment (article_id, username, body) {
