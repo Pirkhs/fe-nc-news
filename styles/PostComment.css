@@ -8,6 +8,11 @@
     box-shadow: 10px 15px 20px rgb(13, 14, 14);
 }
 
+.post-comment button {
+    padding: 1%;
+    cursor: pointer;
+}
+
 h5 {
     font-size: 150%;
 }
