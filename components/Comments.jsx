@@ -1,9 +1,11 @@
 import { getCommentsByArticleId } from '../src/api'
 import '../styles/Comments.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import Loading from './Loading'
 import CommentCard from '../components/CommentCard'
 import PostComment from './PostComment'
+
+
 
 export default function Comments ({article_id}) {
     const [comments, setComments] = useState([])
@@ -28,7 +30,7 @@ export default function Comments ({article_id}) {
             <PostComment article_id={article_id} comments={comments} handleCommentState={handleCommentState}/>
             <br></br>
             {comments.map(comment => {
-                return <CommentCard key={comment.comment_id} comment = {comment}/>
+                return <CommentCard key={comment.comment_id} comment = {comment} comments = {comments} handleCommentState={handleCommentState}/>
             })}
         </div>
     )

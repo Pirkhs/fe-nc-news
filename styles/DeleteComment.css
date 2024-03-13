@@ -1,0 +1,8 @@
+.delete-comment {
+    text-align: right;
+}
+
+.delete-comment button {
+    padding: 1%;
+    cursor: pointer;
+}
