@@ -1,0 +1,27 @@
+.articles-page {
+    width: 100%;
+    display: flex;
+}
+
+.filter-by-topics {
+    flex: 20%;
+    background-color: white;
+    height: 20%;
+    margin-right: 3%;
+    padding: 2%;
+    box-shadow: 10px 15px 20px rgb(13, 14, 14);
+}
+
+.filter-by-topics li {
+    border: 1px solid black;
+    width: 30%;
+    margin:3%;
+    text-align: center;;
+    border-radius: 5%;
+
+}
+
+.articles {
+    flex: 80%;
+}
+
