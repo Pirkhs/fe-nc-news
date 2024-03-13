@@ -17,12 +17,19 @@ export default function SingleArticle () {
         else if (buttonClicked.className === "article-downvote") incrementVoteCount(-1, e)
     }
 
+    const updateArticle = (currArticle, incVotes, isSuccess) => {
+        const copyCurrArticle = {...currArticle}
+        if (isSuccess) copyCurrArticle.votes = (article.votes + incVotes)
+        else copyCurrArticle.votes = (article.votes)
+
+        return copyCurrArticle
+    }
+
     const incrementVoteCount = (incVotes, e) => {
-        setArticle({...article, votes: article.votes + incVotes})
+        setArticle(currArticle => updateArticle(currArticle, incVotes, true))
         incrementArticleVoteCount(article_id, incVotes)
         .catch(err => {
-            setArticle({...article, votes: article.votes - incVotes})
-            return
+            setArticle(currArticle => updateArticle(currArticle, incVotes, false))
         })
         
         if (buttonClicked.className === "article-upvote") {
