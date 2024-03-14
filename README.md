@@ -20,6 +20,7 @@ __Links__
 - A link to the live version on Netflify can be found here: https://mellifluous-figolla-0b9339.netlify.app/
 - The back end API can be found here: https://nc-news-xq0k.onrender.com/
 
-__Further Information__
+__Further Information && WIP__
 - If requests seem to be taking a little while, please wait until the request is fully complete
 - Functionality currently only allows for one of the users from the database
+- Overall styling of the web app is still under consideration
