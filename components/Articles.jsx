@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getAllArticles, getAllTopics, getArticlesByTopic, sortArticles } from '../src/api'
+import { getAllTopics, getArticles, sortArticles } from '../src/api'
 import ArticleCard from './ArticleCard'
 import Loading from './Loading'
 import '../styles/Articles.css'
@@ -27,27 +27,19 @@ export default function Articles () {
 
     useEffect(() => {
         setIsLoading(true)
-        getAllArticles().then(articles => {
-            setArticles(articles.data.articles)
-            setIsLoading(false)
-        })
-
-        getAllTopics().then(({data: {topics}}) => {
-            setTopics(topics)
-        })
-
-    }, [topicQuery])
-
-
-    useEffect(() => {
-        if(!topicQuery) return
-        setIsLoading(true)
-        getArticlesByTopic(topicQuery).then(({data: {articles}}) => { 
+        getArticles(topicQuery).then(({data: {articles}}) => { 
             setArticles(articles)
             setIsLoading(false)
         })
     }, [topicQuery])
 
+    useEffect(() => {
+        setIsLoading(true)
+        getAllTopics().then(({data: {topics}}) => {
+            setTopics(topics)
+        })
+
+    }, [])
 
     useEffect(() => {
         if (!sortQuery || !orderQuery) return 

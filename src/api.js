@@ -4,10 +4,6 @@ const newsAPI = axios.create({
     baseURL: 'https://nc-news-xq0k.onrender.com/api'
 })
 
-export function getAllArticles () {
-    return newsAPI.get("/articles")
-}
-
 export function getArticleById (article_id) {
     return newsAPI.get(`/articles/${article_id}`)
 }
@@ -34,11 +30,11 @@ export function getAllTopics () {
     return newsAPI.get("/topics")
 }
 
-export function getArticlesByTopic (topic) {
+export function getArticles (topic) {
+    if (!topic) return newsAPI.get("/articles")
     return newsAPI.get(`/articles/?topic=${topic}`)
 }
 
 export function sortArticles(sort_by, order) {
-    console.log(`/articles/?sort_by=${sort_by}&&order=${order}`);
     return newsAPI.get(`/articles/?sort_by=${sort_by}&&order=${order}`)
 }
