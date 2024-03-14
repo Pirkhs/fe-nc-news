@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { getArticleById, incrementArticleVoteCount } from "../src/api";
 import Loading from './Loading';
 import Comments from './Comments';
+import Error from './Error'
 
 export default function SingleArticle () {
     const [article, setArticle] = useState({})
     const {article_id} = useParams();
     const [isLoading, setIsLoading] = useState(true)
     const [buttonClicked, setButtonClicked] = useState({})
+    const [error, setError] = useState(null)
 
     const handleVote = (e) => {
         e.preventDefault()
@@ -50,7 +52,13 @@ export default function SingleArticle () {
             setArticle(article)
             setIsLoading(false)
         })
+        .catch(error => {
+            setIsLoading(false)
+            setError('404: Article id does not exist')
+        } )
     }, [])
+
+    if (error) return <Error msg={error}/>
 
     return isLoading ? ( <Loading/> ) :
      (
