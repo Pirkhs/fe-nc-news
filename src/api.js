@@ -30,11 +30,12 @@ export function getAllTopics () {
     return newsAPI.get("/topics")
 }
 
-export function getArticles (topic) {
-    if (!topic) return newsAPI.get("/articles")
-    return newsAPI.get(`/articles/?topic=${topic}`)
-}
-
-export function sortArticles(sort_by, order) {
-    return newsAPI.get(`/articles/?sort_by=${sort_by}&&order=${order}`)
+export function getArticles (topic, sort_by, order) {
+    let baseEndpoint = `/articles/`
+    if (topic || sort_by || order) baseEndpoint += "?"
+    if (topic) baseEndpoint += `topic=${topic}`
+    if (sort_by) baseEndpoint += `&&sort_by=${sort_by}`
+    if (order) baseEndpoint += `&&order=${order}`
+    return newsAPI.get(baseEndpoint)
+    
 }
