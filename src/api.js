@@ -37,3 +37,8 @@ export function getAllTopics () {
 export function getArticlesByTopic (topic) {
     return newsAPI.get(`/articles/?topic=${topic}`)
 }
+
+export function sortArticles(sort_by, order) {
+    console.log(`/articles/?sort_by=${sort_by}&&order=${order}`);
+    return newsAPI.get(`/articles/?sort_by=${sort_by}&&order=${order}`)
+}
