@@ -29,3 +29,11 @@ export function deleteComment (comment_id) {
     return newsAPI.delete(`/comments/${comment_id}`)
 
 }
+
+export function getAllTopics () {
+    return newsAPI.get("/topics")
+}
+
+export function getArticlesByTopic (topic) {
+    return newsAPI.get(`/articles/?topic=${topic}`)
+}
