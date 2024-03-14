@@ -8,13 +8,17 @@ __Project Summary__
 - Users can choose to post and/or delete comments which will impact the back-end API data directly
 - Various error handling practices in place
 
-__Setting Up__
-- If you wish to clone this repo locally run the command 'git clone 
+__Setting Up Locally__
+- If you wish to clone this repo locally run the command 'git clone https://github.com/Pirkhs/fe-nc-news.git'
+- Ensure you are in the correct working direction before running any commands below: 'cd [local_file_path]'
+- Run 'npm install' in your terminal to download all the required npm packages
+- The command 'npm run dev' will then host the server locally on port number 5173
+Version Control
+- The recommended Node version to run this project is v21.2.0+
+
 __Links__
 - A link to the live version on Netflify can be found here: https://mellifluous-figolla-0b9339.netlify.app/
 - The back end API can be found here: https://nc-news-xq0k.onrender.com/
-
-__Version Control__
 
 __Further Information__
 - If requests seem to be taking a little while, please wait until the request is fully complete
