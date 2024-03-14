@@ -13,7 +13,7 @@ __Setting Up Locally__
 - Ensure you are in the correct working direction before running any commands below: 'cd [local_file_path]'
 - Run 'npm install' in your terminal to download all the required npm packages
 - The command 'npm run dev' will then host the server locally on port number 5173 
-- <b> Version Control </b> The recommended Node version to run this project is v21.2.0+
+- _Version Control_: The recommended Node version to run this project is v21.2.0+
 
 
 __Links__
