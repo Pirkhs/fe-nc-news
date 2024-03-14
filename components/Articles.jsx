@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getAllArticles, getAllTopics, getArticlesByTopic } from '../src/api'
+import { getAllArticles, getAllTopics, getArticlesByTopic, sortArticles } from '../src/api'
 import ArticleCard from './ArticleCard'
 import Loading from './Loading'
 import '../styles/Articles.css'
@@ -9,10 +9,21 @@ export default function Articles () {
     const [articles, setArticles] = useState([])
     const [topics, setTopics] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [sortBy, setSortBy] = useState(null)
+    const [order, setOrder] = useState(null)
     
     const [searchParams, setSearchParams] = useSearchParams();
     const topicQuery = searchParams.get("topic")  
+    const sortQuery = searchParams.get("sort_by")
+    const orderQuery = searchParams.get("order")
     
+    const handleSortBy = (e) => {
+        e.preventDefault()
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set('order', order);
+        newParams.set('sort_by', sortBy)
+        setSearchParams(newParams);
+    }
 
     useEffect(() => {
         setIsLoading(true)
@@ -27,6 +38,7 @@ export default function Articles () {
 
     }, [topicQuery])
 
+
     useEffect(() => {
         if(!topicQuery) return
         setIsLoading(true)
@@ -35,6 +47,15 @@ export default function Articles () {
             setIsLoading(false)
         })
     }, [topicQuery])
+
+
+    useEffect(() => {
+        if (!sortQuery || !orderQuery) return 
+        sortArticles(sortQuery, orderQuery).then(({data: {articles}}) => {
+            setArticles(articles)
+        })
+
+    }, [sortQuery, orderQuery])
 
     return isLoading ? (
         <Loading/>
@@ -53,6 +74,29 @@ export default function Articles () {
                         return <li key={topic.slug}> <Link to={`/articles/?topic=${topic.slug}`}> {topic.slug[0].toUpperCase() + topic.slug.slice(1)}</Link> </li>
                     })}
                 </ul>
+                <form className="sort-by" onSubmit = {(e) => handleSortBy(e)}>
+                    <h3> Sort By </h3>
+                    <fieldset>
+                        <input type="radio" id="date" name="sort-by" onClick={() => setSortBy("created_at")}></input>
+                        <label htmlFor="date"> Date </label>
+                        <br></br>
+                        <input type="radio" id="comment_count" name="sort-by" onClick={() => setSortBy("comment_count")} ></input>
+                        <label htmlFor="comment_count"> Comment Count </label>
+                        <br></br>
+                        <input type="radio" id="votes" name="sort-by" onClick={() => setSortBy("votes")} ></input>
+                        <label htmlFor="Votes"> Votes </label>
+                        <br></br>
+                    </fieldset>
+                    <br></br>
+                    <input type="radio" id="asc" name="order" onClick={() => setOrder("asc")} ></input>
+                    <label htmlFor="asc"> Ascending </label>
+                    <br></br>
+                    <input type="radio" id="desc" name="order" onClick={() => setOrder("desc")}></input>
+                    <label htmlFor="asc"> Descending </label>
+
+                    <br></br>
+                    <button className="sort-button" type="submit"> Sort </button>
+                </form>
             </div>
         </>
     )

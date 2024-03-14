@@ -1,10 +1,11 @@
 .articles-page {
     width: 100%;
     display: flex;
+    flex-direction: row;
 }
 
 .filter-by-topics {
-    flex: 20%;
+    flex: 15%;
     background-color: white;
     height: 20%;
     margin-right: 3%;
@@ -13,8 +14,8 @@
 }
 
 .filter-by-topics li {
-    border: 1px solid black;
-    width: 30%;
+    /* border: 1px solid black; */
+    /* width: 30%; */
     margin:3%;
     text-align: center;;
     border-radius: 5%;
@@ -22,6 +23,20 @@
 }
 
 .articles {
-    flex: 80%;
+    flex: 70%;
 }
 
+.sort-by {
+    flex: 15%;
+    background-color: white;
+    height: 20%;
+    margin-right: 3%;
+    padding: 2%;
+    box-shadow: 10px 15px 20px rgb(13, 14, 14);
+}
+
+.sort-button {
+    text-align: center;
+    padding: 3%;
+    border-radius: 10%;
+}
