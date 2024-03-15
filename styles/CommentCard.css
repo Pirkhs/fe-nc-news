@@ -23,9 +23,3 @@
 .vote-count {
     display: inline-block;
 }
-
-.comment-card-upvote, .comment-card-downvote {
-    border: 2px solid black;
-    border-radius: 5%;
-    cursor: pointer;
-}

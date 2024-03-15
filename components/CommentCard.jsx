@@ -16,9 +16,7 @@ export default function CommentCard ({comment, handleCommentState}) {
             <p className="comment-author"> {comment.author} </p>
             <p> {comment.body} </p>
             <br></br>
-            <button className="comment-card-upvote">   ⬆️   </button>
-            <p className="vote-count">  {comment.votes }  </p>
-            <button className="comment-card-downvote">   ⬇️  </button>
+            <p className="vote-count"> Votes: {comment.votes }  </p>
             <p className="comment-id"> Comment Id: {comment.comment_id}</p>
             <p> { Date(comment.created_at).toString()} </p>
             <br></br>
