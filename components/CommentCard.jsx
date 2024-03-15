@@ -5,7 +5,7 @@ import { useContext } from 'react'
 
 export default function CommentCard ({comment, handleCommentState}) {
 
-    const {loggedInUser: username} = useContext(UserContext)
+    const {loggedInUser: {username}} = useContext(UserContext)
 
     return (
         <div className="comment-card">

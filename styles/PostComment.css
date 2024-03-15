@@ -1,11 +1,21 @@
 .post-comment {
+    color: white;
     padding-left: 3%;
     padding-bottom: 3%;
     padding-top: 3%;
     width: 85%;
     margin-left: 5%;
-    background-color: white;
+    border-bottom: 0.5px solid rgb(146, 146, 146);
     box-shadow: 10px 15px 20px rgb(13, 14, 14);
+}
+
+.post-comment textarea {
+    background-color: #102027;
+    color: white;
+}
+
+textarea::placeholder {
+    color: rgb(151, 151, 151);
 }
 
 .post-comment button {
