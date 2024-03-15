@@ -6,6 +6,7 @@ __Project Summary__
 - Ability to upvote/downvote on articles that the user likes/dislikes
 - View the comments that other users have posted to the API
 - Users can choose to post and/or delete comments which will impact the back-end API data directly
+- View a list of all users and choose to log in as any of them available
 - Various error handling practices in place
 
 __Setting Up Locally__
@@ -22,5 +23,4 @@ __Links__
 
 __Further Information && WIP__
 - If requests seem to be taking a little while, please wait until the request is fully complete
-- Functionality currently only allows for one of the users from the database
 - Overall styling of the web app is still under consideration
