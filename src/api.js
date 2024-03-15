@@ -39,3 +39,7 @@ export function getArticles (topic, sort_by, order) {
     return newsAPI.get(baseEndpoint)
     
 }
+
+export function getAllUsers() {
+    return newsAPI.get("/users")
+}

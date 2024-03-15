@@ -25,7 +25,9 @@ export default function PostComment ({article_id, comments, handleCommentState})
     return error? ( <Error msg={error}/> ) : (
         <form onSubmit={(e) => handleCommentSubmit(e)} className="post-comment"> 
         <h5> Post a Comment</h5>
-            <label id="comment-username"> Username: <i>{loggedInUser.username}</i> </label>
+            <img id="avatar-url" src={loggedInUser.avatar_url}/> 
+            <br></br>
+            <label id="comment-username"> Username: <strong> {loggedInUser.username}</strong> </label>
             <br></br>
 
             <label id="comment-body"> Comment Body: </label>
