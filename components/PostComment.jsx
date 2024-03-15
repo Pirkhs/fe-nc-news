@@ -25,14 +25,12 @@ export default function PostComment ({article_id, comments, handleCommentState})
     return error? ( <Error msg={error}/> ) : (
         <form onSubmit={(e) => handleCommentSubmit(e)} className="post-comment"> 
         <h5> Post a Comment</h5>
-            <img id="avatar-url" src={loggedInUser.avatar_url}/> 
+            <img id="avatar-url" src={loggedInUser.avatar_url} alt="Your profile image"/> 
             <br></br>
             <label id="comment-username"> Username: <strong> {loggedInUser.username}</strong> </label>
             <br></br>
 
-            <label id="comment-body"> Comment Body: </label>
-            <br></br>
-            <textarea id="comment-body" type="text" value={commentBody} onChange={(e) => setCommentBody(e.target.value)}></textarea>
+            <textarea id="comment-body" type="text" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} placeholder="Comment Body"></textarea>
             <br></br>
 
             <button type="submit"> Post </button>

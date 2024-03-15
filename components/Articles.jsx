@@ -87,14 +87,19 @@ export default function Articles () {
                     })}
                 </div>
                 <ul className="filter-by-topics">
-                    <h3> Filter By Topic </h3>
+                    <h3> TOPICS </h3>
                     <br></br>
                     {topics.map(topic => {
-                        return <li key={topic.slug}> <Link to={`/articles/?topic=${topic.slug}`}> {topic.slug[0].toUpperCase() + topic.slug.slice(1)}</Link> </li>
+                        return (
+                            <div key={topic.slug} className="topic"> 
+                                <p> <Link  to={`/articles/?topic=${topic.slug}`} style={{color:"white", textDecoration:"none"}}> {topic.slug[0].toUpperCase() + topic.slug.slice(1)}</Link> </p>
+                                <br></br>
+                            </div>
+                        )
                     })}
                 </ul>
                 <form className="sort-by" onSubmit = {(e) => handleSortBy(e)}>
-                    <h3> Sort By </h3>
+                    <h3 style={{color:"rgb(146, 146, 146)"}}> SORT BY </h3>
                    
                     <input type="radio" id="date" name="sort-by" onChange={() => setSortBy("created_at")}></input>
                     <label htmlFor="date"> Date </label>
@@ -107,7 +112,7 @@ export default function Articles () {
                     <br></br>
                     
                     <br></br>
-                    <h3> Order </h3>
+                    <h3 style={{color:"rgb(146, 146, 146)"}}> ORDER </h3>
                     <input type="radio" id="asc" name="order" onChange={() => setOrder("asc")} ></input>
                     <label htmlFor="asc"> Ascending </label>
                     <br></br>
