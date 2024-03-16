@@ -109,7 +109,7 @@ export default function Articles () {
                 <label htmlFor="comment_count"> Comment Count </label>
                 <br></br>
                 <input type="radio" id="votes" name="sort-by" onChange={() => setSortBy("votes")} ></input>
-                <label htmlFor="Votes"> Votes </label>
+                <label htmlFor="votes"> Votes </label>
                 <br></br>
                 
                 <br></br>
@@ -118,7 +118,7 @@ export default function Articles () {
                 <label htmlFor="asc"> Ascending </label>
                 <br></br>
                 <input type="radio" id="desc" name="order" onChange={() => setOrder("desc")}></input>
-                <label htmlFor="asc"> Descending </label>
+                <label htmlFor="desc"> Descending </label>
 
                 <br></br>
                 <button className="sort-button" type="submit"> Sort </button>

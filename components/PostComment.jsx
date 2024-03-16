@@ -27,10 +27,11 @@ export default function PostComment ({article_id, comments, handleCommentState})
         <h5> Post a Comment</h5>
             <img id="avatar-url" src={loggedInUser.avatar_url} alt="Your profile image"/> 
             <br></br>
-            <label id="comment-username"> Username: <strong> {loggedInUser.username}</strong> </label>
+            <p id="comment-username"> Username: <strong> {loggedInUser.username}</strong> </p>
             <br></br>
 
-            <textarea id="comment-body" type="text" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} placeholder="Comment Body"></textarea>
+            <label htmlFor="comment-body">Comment Body: </label>
+            <textarea id="comment-body" type="text" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} placeholder="Type Here "></textarea>
             <br></br>
 
             <button type="submit"> Post </button>
