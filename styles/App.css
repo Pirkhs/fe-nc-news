@@ -18,8 +18,9 @@ header {
 }
 
 nav {
+  position: sticky;
   display:flex;
-  justify-content: left;
+  justify-content: center;
   background-color: #030607;
   border-bottom: 0.5px solid rgb(146, 146, 146);
   padding-bottom: 1%;
@@ -27,4 +28,9 @@ nav {
 
 nav h2 {
   color: white;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
 }

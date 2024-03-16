@@ -23,6 +23,10 @@ textarea::placeholder {
     cursor: pointer;
 }
 
+.post-comment img {
+    border-radius: 50%;
+}
+
 h5 {
     font-size: 150%;
 }

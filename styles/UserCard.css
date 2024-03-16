@@ -1,21 +1,28 @@
 .user-card {
     color: white;
-    width: 100%;
-    margin: 2%;
-    padding: 2%;
-    border: 0.5px solid rgb(146, 146, 146);
+    padding-left: 3%;
+    padding-top: 3%;
+    width: 85%;
+    margin-left: 5%;
+    box-shadow: 10px 15px 20px rgb(13, 14, 14);
+    border-bottom: 0.5px solid rgb(146, 146, 146);
 }
 
 .user-card img {
-    width: 100%;
-    height: 50%;
+    width: 10%;
+    border-radius: 70%;
+}
+
+.user-card:hover {
+    background-color:  #0e1c22;
 }
 
 .log-in {
-    background-color:  #0e1c22;
-    color: white;
-    margin-top: 50%;
-    padding: 5%;
+    /* background-color:  #0e1c22; */
+    /* color: white; */
+    padding: 1%;
+    margin: 1%;
     border-radius: 5%;
+    border: none;
     cursor: pointer;
 }

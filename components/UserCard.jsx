@@ -7,7 +7,7 @@ export default function UserCard({user}){
 
     return (
         <div className="user-card">
-            <p> {user.username} </p>
+            <p> Username: <strong> {user.username} </strong> </p>
             <img src={user.avatar_url}></img>
             <br></br>
             <button className='log-in' onClick={() => setLoggedInUser(user)}> Log In </button>

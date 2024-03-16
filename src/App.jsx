@@ -20,8 +20,10 @@ function App() {
   })
   return (
     <UserContext.Provider value = {{loggedInUser, setLoggedInUser}}>
-      <Header/>
-      <Nav/>
+      <div className="sticky-nav">
+        <Header/>
+        <Nav/>
+      </div>
       <br></br>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
