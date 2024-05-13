@@ -18,9 +18,8 @@ __Setting Up Locally__
 
 
 __Links__
-- A link to the live version on Netflify can be found here: https://mellifluous-figolla-0b9339.netlify.app/
+- A link to the live version on Netflify can be found here: https://nc-news-nathan-briers.netlify.app
 - The back end API can be found here: https://nc-news-xq0k.onrender.com/
 
-__Further Information && WIP__
-- If requests seem to be taking a little while, please wait until the request is fully complete
-- Overall styling of the web app is still under consideration
+__Further Information__
+- If requests seem to be taking a little while, please wait until the request is fully completed
