@@ -11,7 +11,7 @@ __Project Summary__
 
 __Setting Up Locally__
 - If you wish to clone this repo locally run the command 'git clone https://github.com/Pirkhs/fe-nc-news.git'
-- Ensure you are in the correct working direction before running any commands below: 'cd [local_file_path]'
+- Ensure you are in the correct working directory before running any commands below: 'cd [local_file_path]'
 - Run 'npm install' in your terminal to download all the required npm packages
 - The command 'npm run dev' will then host the server locally on port number 5173 
 - _Version Control_: The recommended Node version to run this project is v21.2.0+
